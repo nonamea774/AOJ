@@ -16,9 +16,8 @@ const int LCM(const int a,const int b){
 	while(x%=y){
 		std::swap(x,y);
 	}
-	long long tmp(a);
+	int tmp(a/y);
 	tmp*=b;
-	tmp/=y;
 	return tmp;
 }
 

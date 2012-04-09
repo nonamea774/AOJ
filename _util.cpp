@@ -11,8 +11,28 @@ const int LCM(const int a,const int b){
 	while(x%=y){
 		std::swap(x,y);
 	}
-	long long tmp(a);
+	int tmp(a/y);
 	tmp*=b;
-	tmp/=y;
 	return tmp;
+}
+
+class Mod{
+		const int n;
+		public:
+			Mod(int const _n):n(_n){}
+			bool operator()(const int _src)const{
+				return ! (_src % n);
+			}
+	};
+
+const std::vector<int> Eratosthenes(const std::vector<int>& src){
+	std::vector<int> result,tmp(src);
+	while(!tmp.empty()){
+		int n(tmp[0]);
+		result.push_back(n);
+		Mod mod(n);
+		std::vector<int>::iterator it= std::remove_if( tmp.begin(), tmp.end(), mod );
+		tmp.erase(it,tmp.end());
+	}
+	return result;
 }
