@@ -1,3 +1,4 @@
+//////////
 const int GCM(const int a,const int b){
 	int x(a),y(b);
 	while(x%=y){
@@ -15,7 +16,7 @@ const int LCM(const int a,const int b){
 	tmp*=b;
 	return tmp;
 }
-
+//////////
 class Mod{
 		const int n;
 		public:
@@ -36,3 +37,18 @@ const std::vector<int> Eratosthenes(const std::vector<int>& src){
 	}
 	return result;
 }
+/////////
+// a`f‚Í’è” 
+// ax + by = c
+// dx + ey = f
+// x,y‚ğ‰ğ‚­
+// ‰ğ‚Ì‘¶İ‚Í‰¼’è
+
+std::pair<double,double> const Solve2(double a,double b,double c,double d,double e,double f){
+    double x,y;
+    double det(a*e-b*d);
+    x= (c*e-b*f)/det;
+    y= (-c*d+a*f)/det;
+	return std::make_pair(x,y);
+}
+ 
