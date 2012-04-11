@@ -6,6 +6,8 @@
 #include <set>
 #include <cmath>
 #include <map>
+#include <list>
+
 using namespace std;
 
 int main(int,char**){
