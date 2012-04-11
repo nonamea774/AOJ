@@ -6,6 +6,8 @@
 #include <set>
 #include <cmath>
 #include <map>
+#include <list>
+
 
 
 int main(int,char**){
