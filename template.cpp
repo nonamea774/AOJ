@@ -6,7 +6,7 @@
 #include <set>
 #include <cmath>
 #include <map>
-
+using namespace std;
 
 int main(int,char**){
 
